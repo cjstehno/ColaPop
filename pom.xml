@@ -1,0 +1,139 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  
+	<modelVersion>4.0.0</modelVersion>
+  	<groupId>stehno.com</groupId>
+  	<artifactId>colapop</artifactId>
+  	
+  	<packaging>jar</packaging>
+  	<version>0.0.1-SNAPSHOT</version>
+  	
+  	<name>colapop</name>
+  	<url>http://maven.apache.org</url>
+  	
+	<developers>
+	  	<developer>
+	    	<id>cjstehno</id>
+	    	<name>Christopher J. Stehno</name>
+	    	<email>chris@stehno.com</email>
+	    	<url>http://stehno.com</url>
+	    	<roles>
+	      		<role>developer</role>
+	    	</roles>
+	    	<timezone>-7</timezone>
+	  	</developer>
+	</developers>  	
+  	
+	<licenses>
+	  	<license>
+	    	<name>Apache 2</name>
+	    	<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+	    	<distribution>repo</distribution>
+	    	<comments>A business-friendly OSS license</comments>
+	  	</license>
+	</licenses>  	
+  	
+	<dependencies>
+    	<dependency>
+      		<groupId>commons-lang</groupId>
+      		<artifactId>commons-lang</artifactId>
+      		<version>2.4</version>
+      		<scope>compile</scope>
+    	</dependency>
+    	<dependency>
+      		<groupId>commons-net</groupId>
+      		<artifactId>commons-net</artifactId>
+      		<version>1.4.1</version>
+      		<scope>compile</scope>
+    	</dependency>
+    	
+    	<dependency>
+      		<groupId>log4j</groupId>
+      		<artifactId>log4j</artifactId>
+      		<version>1.2.12</version>
+      		<scope>runtime</scope>
+    	</dependency>	
+    	<dependency>
+      		<groupId>org.slf4j</groupId>
+      		<artifactId>slf4j-log4j12</artifactId>
+      		<version>1.5.0</version>
+      		<scope>compile</scope>
+    	</dependency>
+    	    	
+    	<dependency>
+      		<groupId>org.apache.mina</groupId>
+      		<artifactId>mina-core</artifactId>
+      		<version>2.0.0-M1</version>
+      		<scope>compile</scope>
+    	</dependency>	
+	
+    	<dependency>
+      		<groupId>junit</groupId>
+      		<artifactId>junit</artifactId>
+      		<version>4.4</version>
+      		<scope>test</scope>
+    	</dependency>
+    	<dependency>
+      		<groupId>org.jmock</groupId>
+      		<artifactId>jmock</artifactId>
+      		<version>2.4.0</version>
+      		<scope>test</scope>
+    	</dependency> 
+    	<dependency>
+      		<groupId>org.jmock</groupId>
+      		<artifactId>jmock-junit4</artifactId>
+      		<version>2.4.0</version>
+      		<scope>test</scope>
+    	</dependency> 
+    	<dependency>
+      		<groupId>org.hamcrest</groupId>
+      		<artifactId>hamcrest-core</artifactId>
+      		<version>1.1</version>
+      		<scope>test</scope>
+    	</dependency>
+    	<dependency>
+      		<groupId>org.hamcrest</groupId>
+      		<artifactId>hamcrest-library</artifactId>
+      		<version>1.1</version>
+      		<scope>test</scope>
+    	</dependency>   	
+  	</dependencies>
+  	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+	        	<artifactId>maven-compiler-plugin</artifactId>
+	        	<configuration>
+		          <source>1.6</source>
+		          <target>1.6</target>
+	        	</configuration>
+	      	</plugin>
+	    </plugins>
+	</build>  	
+  	
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+			</plugin>	
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jxr-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-report-plugin</artifactId>
+				<version>2.4.2</version>
+			</plugin>
+      		<plugin>
+        		<groupId>org.apache.maven.plugins</groupId>
+        		<artifactId>maven-pmd-plugin</artifactId>
+        		<configuration>
+        			<targetJdk>1.6</targetJdk>
+        		</configuration>
+			</plugin>
+		</plugins>
+	</reporting>  	
+</project>

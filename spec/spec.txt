@@ -1,0 +1,31 @@
+
+
+== Commands ==
+
+= QUIT =
+* 
+
+
+
+need to implement server states (val stored in session?)
+need to perform defensive copies of msginfo when pulled from system (to protect delete changes)
+
+determine how db is to be used
+	perhaps load messages into memory at login?
+	how to "lock" message drop
+	
+	users
+	userid, username, pass
+	
+	messages
+	userid, uid, size, deleted, content (shoudl deleted just be a transactional prop?)
+	
+when session starts pull current messages into cached MsgInfo objects and lock out other access to that message box.
+ * message numbers are determined by the ordering of the cached messages.
+ * deletes are done to cached mess
+ 
+when session ends push changes to db and unlock message box
+
+do any commands have more than 1 arg... if not, change from String[] to String
+
+	
